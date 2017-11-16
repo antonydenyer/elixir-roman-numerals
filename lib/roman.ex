@@ -1,6 +1,10 @@
 defmodule Roman do
   
-  def to_roman(number, roman_accumulator) do
+  def to_roman(number, roman_accumulator) when number >= 4 do
+    to_roman(number - 4, roman_accumulator <> "IV")
+  end
+
+  def to_roman(number, roman_accumulator) when number <= 3 do
     roman_accumulator <> String.duplicate("I", number)
   end
   
@@ -14,10 +18,6 @@ defmodule Roman do
 
   def to_roman(number) when number >= 5 do
     to_roman(number - 5, "V")
-  end
-
-  def to_roman(number, roman_accumulator) when number >= 4 do
-    to_roman(number - 4, roman_accumulator <> "IV")
   end
 
   def to_roman(number) do
