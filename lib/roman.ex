@@ -79,23 +79,23 @@ defmodule Roman do
     to_roman(number - 5, roman_accumulator <> "V")
   end
 
-  def to_roman(number, roman_accumulator) when number >= 4 do
-    to_roman(number - 4, roman_accumulator <> "IV")
+  def to_roman(number, roman_accumulator) when number == 4 do
+    roman_accumulator <> "IV"
   end
 
-  def to_roman(number, roman_accumulator) when number >= 3 do
-    to_roman(number - 3, roman_accumulator <> "III")
+  def to_roman(number, roman_accumulator) when number == 3 do
+    roman_accumulator <> "III"
   end
 
-  def to_roman(number, roman_accumulator) when number >= 2 do
-    to_roman(number - 2, roman_accumulator <> "II")
+  def to_roman(number, roman_accumulator) when number == 2 do
+    roman_accumulator <> "II"
   end
 
-  def to_roman(number, roman_accumulator) when number >= 1 do
+  def to_roman(number, roman_accumulator) when number == 1 do
     roman_accumulator <> "I"
   end
 
-  def to_roman(number, roman_accumulator) when number >= 0 do
+  def to_roman(number, roman_accumulator) when number == 0 do
     roman_accumulator
   end
 
