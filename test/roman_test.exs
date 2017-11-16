@@ -21,4 +21,16 @@ defmodule RomanTest do
     assert Roman.to_roman(6) == "VI"
   end
 
+  test "nine is IX" do
+    assert Roman.to_roman(9) == "IX"
+  end
+
+  test "ten is X" do
+    assert Roman.to_roman(10) == "X"
+  end
+
+  test "eleven is XI" do
+    assert Roman.to_roman(11) == "XI"
+  end
+
 end
