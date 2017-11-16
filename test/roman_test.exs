@@ -15,4 +15,8 @@ defmodule RomanTest do
     assert Roman.to_roman(4) == "IV"
   end
 
+  test "five is V" do
+    assert Roman.to_roman(5) == "V"
+  end
+
 end
