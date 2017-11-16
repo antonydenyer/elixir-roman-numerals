@@ -1,5 +1,9 @@
 defmodule Roman do
   
+  def to_roman(number, roman_accumulator) when number >= 5 do
+    to_roman(number - 5, roman_accumulator <> "V")
+  end
+
   def to_roman(number, roman_accumulator) when number >= 4 do
     to_roman(number - 4, roman_accumulator <> "IV")
   end
@@ -14,10 +18,6 @@ defmodule Roman do
 
   def to_roman(number) when number >= 9 do
     to_roman(number - 9, "IX")
-  end
-
-  def to_roman(number) when number >= 5 do
-    to_roman(number - 5, "V")
   end
 
   def to_roman(number) do

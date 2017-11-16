@@ -36,4 +36,9 @@ defmodule RomanTest do
   test "forteen is XIV" do
     assert Roman.to_roman(14) == "XIV"
   end
+
+  test "sixteen is XVI" do
+    assert Roman.to_roman(16) == "XVI"
+  end
+
 end
